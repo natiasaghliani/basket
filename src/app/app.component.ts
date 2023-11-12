@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BasketService } from './services/basket.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'basket';
+
+  get basketProductAmount(): number{
+    return this.basketService.basketProducts.length
+  }  
+  constructor(private basketService: BasketService) {}
 }
