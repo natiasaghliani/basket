@@ -6,16 +6,21 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { BasketComponent } from './pages/basket/basket.component';
+import { DiscountPipe } from './discount.pipe';
+import { FormsModule } from '@angular/forms'; 
+
 
 @NgModule({
   declarations: [
     AppComponent,
+    
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

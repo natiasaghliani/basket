@@ -12,6 +12,12 @@
           <a  class="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900" aria-expanded="false" routerLink="basket">
             Basket {{basketProductAmount}}
           </a>
+          <a *ngIf="!showLogOut" class="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900" aria-expanded="false" routerLink="login" >
+            Log In
+          </a>
+          <a *ngIf="showLogOut"  class="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900" aria-expanded="false" >
+            Log Out
+          </a>
         </div>
       </div> 
           
