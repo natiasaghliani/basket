@@ -24,7 +24,7 @@ export class LoginComponent {
 
     } else {
       localStorage.setItem('authenticated', 'false')
-      this.errorMessage = 'ვის ატყუებ, ვირიშვილო!';
+      this.errorMessage = 'Invalid password or user';
     }
   }
 }

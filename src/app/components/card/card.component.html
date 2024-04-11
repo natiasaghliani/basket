@@ -1,20 +1,19 @@
 <div class="
-          backdrop-filter backdrop-blur-lg backdrop-saturate-180
-          bg-rgba-25 bg-opacity-25
-          rounded-lg border border-opacity-25 border-white
-          p-10
-          filter drop-shadow-md
-          flex flex-col items-center justify-center text-center
-          bg-antiquewhite">
-  <div class="w-full h-full">
-    <div class="h-300px w-full rounded-lg border border-white border-opacity-25">
-      <img [src]="imageUrl" alt="{{altText}}" class="h-full w-full object-cover object-center group-hover:opacity-75">
+max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+  <div class="w-full h-full bg-blue">
+    <div class="h-200px w-full rounded-lg border border-white border-opacity-25">
+      <img [src]="imageUrl" alt="{{altText}}" class="rounded-t-lg h-200px w-full">
     </div>
-    <h3 class="text-white text-opacity-98 uppercase text-2xl">{{title}}</h3>
-    <p class="mt-1 text-lg font-medium text-gray-900">{{price}}</p>
-    <p class="mt-1 text-lg font-medium text-gray-900">{{discount}}</p>
-    <p class="mt-1 text-lg font-medium text-gray-900">- {{price | sale:discount}}%</p>
-    <p class="mt-1 text-lg font-medium text-gray-900">Quantity: {{quantity}}</p>
+    <h3 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white px-5 py-1">{{title}}</h3>
+    <div class="flex justify-between px-5 py-1">
+      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 line-through">{{price}}$</p>
+      <div class="flex">
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{discount}}$</p>
+        <p class="mb-3 font-normal text-gray-700 dark:text-red-400 ml-3">- {{price | sale:discount}}%</p>
+      </div>
+
+    </div>
+    <p class="font-normal text-gray-700 dark:text-gray-400 px-5 py-1">Quantity: {{quantity}}</p>
   </div>
 
 

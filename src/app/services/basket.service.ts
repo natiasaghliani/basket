@@ -14,8 +14,8 @@ export class BasketService {
       altText:
         'Tall slender porcelain bottle with natural clay textured body and cork stopper',
       title: 'Earthen Bottle',
-      price: 48,
-      discount: 20,
+      price: 49.99,
+      discount: 20.99,
       maxQuantity: 10,
       quantity: 0,
     },
@@ -26,8 +26,8 @@ export class BasketService {
       altText:
         'Olive drab green insulated bottle with flared screw lid and flat top.',
       title: 'Nomad Tumbler',
-      price: 35,
-      discount: 15,
+      price: 34.99,
+      discount: 14.99,
       maxQuantity: 7,
       quantity: 0,
 
@@ -39,8 +39,8 @@ export class BasketService {
       altText:
         'Person using a pen to cross a task off a productivity paper card',
       title: 'Focus Paper Refill',
-      price: 89,
-      discount: 45,
+      price: 89.99,
+      discount: 44.99,
       maxQuantity: 12,
       quantity: 0,
 
@@ -51,9 +51,9 @@ export class BasketService {
         'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-04.jpg',
       altText:
         'Hand holding black machined steel mechanical pencil with brass tip and top.',
-      title: 'Machined Mechanical Pencil',
-      price: 35,
-      discount: 20,
+      title: 'Mechanical Pencil',
+      price: 34.99,
+      discount: 19.99,
       maxQuantity: 8,
       quantity: 0,
     },
@@ -64,8 +64,8 @@ export class BasketService {
       altText:
         'Tall slender porcelain bottle with natural clay textured body and cork stopper',
       title: 'Earthen Bottle',
-      price: 48,
-      discount: 13,
+      price: 49.99,
+      discount: 14.99,
       maxQuantity: 5,
       quantity: 0,
 
