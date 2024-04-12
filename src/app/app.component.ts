@@ -19,9 +19,14 @@ export class AppComponent {
   }, 0);
   }  
 
-  showLogOut = null;
+  get authenticated(): boolean {
+    return JSON.parse(localStorage.getItem('authenticated') || 'false')
+    
+  }
+
+
+
   constructor(private basketService: BasketService, private router: Router) {
-    this.showLogOut = JSON.parse(localStorage.getItem('authenticated') || 'false')
     console.log(JSON.parse(localStorage.getItem('authenticated') || 'false'))
   }
 

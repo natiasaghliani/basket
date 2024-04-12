@@ -70,6 +70,144 @@ export class BasketService {
       quantity: 0,
 
     },
+    {
+      id: 1,
+      imageUrl:
+        'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg',
+      altText:
+        'Tall slender porcelain bottle with natural clay textured body and cork stopper',
+      title: 'Earthen Bottle',
+      price: 49.99,
+      discount: 20.99,
+      maxQuantity: 10,
+      quantity: 0,
+    },
+    {
+      id: 2,
+      imageUrl:
+        'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-02.jpg',
+      altText:
+        'Olive drab green insulated bottle with flared screw lid and flat top.',
+      title: 'Nomad Tumbler',
+      price: 34.99,
+      discount: 14.99,
+      maxQuantity: 7,
+      quantity: 0,
+
+    },
+    {
+      id: 3,
+      imageUrl:
+      'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-02.jpg',
+      altText:
+        'Person using a pen to cross a task off a productivity paper card',
+      title: 'Focus Paper Refill',
+      price: 89.99,
+      discount: 44.99,
+      maxQuantity: 12,
+      quantity: 0,
+
+    },
+    {
+      id: 4,
+      imageUrl:
+        'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-04.jpg',
+      altText:
+        'Hand holding black machined steel mechanical pencil with brass tip and top.',
+      title: 'Mechanical Pencil',
+      price: 34.99,
+      discount: 19.99,
+      maxQuantity: 8,
+      quantity: 0,
+    },
+    {
+      id: 5,
+      imageUrl:
+        'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg',
+      altText:
+        'Tall slender porcelain bottle with natural clay textured body and cork stopper',
+      title: 'Earthen Bottle',
+      price: 49.99,
+      discount: 14.99,
+      maxQuantity: 5,
+      quantity: 0,
+
+    },
+    {
+      id: 1,
+      imageUrl:
+        'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg',
+      altText:
+        'Tall slender porcelain bottle with natural clay textured body and cork stopper',
+      title: 'Earthen Bottle',
+      price: 49.99,
+      discount: 20.99,
+      maxQuantity: 10,
+      quantity: 0,
+    },
+    {
+      id: 2,
+      imageUrl:
+        'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-02.jpg',
+      altText:
+        'Olive drab green insulated bottle with flared screw lid and flat top.',
+      title: 'Nomad Tumbler',
+      price: 34.99,
+      discount: 14.99,
+      maxQuantity: 7,
+      quantity: 0,
+
+    },
+    {
+      id: 3,
+      imageUrl:
+      'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-02.jpg',
+      altText:
+        'Person using a pen to cross a task off a productivity paper card',
+      title: 'Focus Paper Refill',
+      price: 89.99,
+      discount: 44.99,
+      maxQuantity: 12,
+      quantity: 0,
+
+    },
+    {
+      id: 4,
+      imageUrl:
+        'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-04.jpg',
+      altText:
+        'Hand holding black machined steel mechanical pencil with brass tip and top.',
+      title: 'Mechanical Pencil',
+      price: 34.99,
+      discount: 19.99,
+      maxQuantity: 8,
+      quantity: 0,
+    },
+    {
+      id: 5,
+      imageUrl:
+        'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg',
+      altText:
+        'Tall slender porcelain bottle with natural clay textured body and cork stopper',
+      title: 'Earthen Bottle',
+      price: 49.99,
+      discount: 14.99,
+      maxQuantity: 5,
+      quantity: 0,
+
+    },
+    {
+      id: 4,
+      imageUrl:
+        'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-04.jpg',
+      altText:
+        'Hand holding black machined steel mechanical pencil with brass tip and top.',
+      title: 'Mechanical Pencil',
+      price: 34.99,
+      discount: 19.99,
+      maxQuantity: 8,
+      quantity: 0,
+    },
   ];
   public basketProducts: any = [];
 
@@ -78,14 +216,8 @@ export class BasketService {
 
     if (storedBasket) {
       this.basketProducts = JSON.parse(storedBasket);
-      // for (let basketItems of this.basketProducts) {
-      //   if (basketItems.id === this.basketProducts.id) {
-      //     basketItems.quantity = this.basketProducts.quantity
-      //   }
-      // }
       this.basketProducts.forEach((element: any) => {
         const findItem = this.products.find((item: any) => item.id === element.id) 
-        // console.log('111111111', element, findItem)
         
         if (findItem && element.id === findItem?.id) {
           
@@ -95,21 +227,11 @@ export class BasketService {
 
       console.log(this.products)
 
-      // ციკლით ვუვლით ბასკეტპროდაქტს
-      // თითოეული აითემისთვის ვეძებთ შესაბამის აითემს პროდაქტსის ერეიში
-      // თუ ვიპოვეთ, ბასკეტის ქუანთითის ვანიჭებთ პროდაქთის ქუანთითის
-
     }
   }
 
-  // addToBasket(product: any): void {
-  //   this.basketProducts.push(product);
-  //   localStorage.setItem('basket', JSON.stringify(this.basketProducts));
-  // }
 
   removeFromBasket(productId: number): void {
-    // this.basketProducts = this.basketProducts.filter((item: any) => item.id !== productId);
-
     const index = this.basketProducts.findIndex(
       (item: any) => item.id === productId
     );
@@ -166,6 +288,4 @@ export class BasketService {
   }
 }
 
-// თუ არის უკვე პროდუქტი მაშინ მარტო ვზრდით რაოდენობას შესაბამის p-ში
-// თუ არ არის პროდქტი მაშინ ვფუშავთ
-// წაშლის დროს უნდა დააკლდეს რაოდენობა
+

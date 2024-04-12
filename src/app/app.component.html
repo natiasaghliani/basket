@@ -9,13 +9,10 @@
       </div>
       <div class="hidden lg:flex lg:gap-x-12">
         <div class="relative flex gap-5">
-          <a  class="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white" aria-expanded="false" routerLink="basket">
+          <a *ngIf="authenticated"  class="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white" aria-expanded="false" routerLink="basket">
             Basket :  {{basketProductAmount}}
           </a>
-          <a *ngIf="!showLogOut" class="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white" aria-expanded="false" routerLink="login" >
-            Log In
-          </a>
-          <a *ngIf="showLogOut"  class="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white" aria-expanded="false" (click)="logOut()">
+          <a *ngIf="authenticated"  class="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white cursor-pointer" aria-expanded="false" (click)="logOut()">
             Log Out
           </a>
         </div>
